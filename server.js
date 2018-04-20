@@ -7,7 +7,7 @@ var passport = require('./config/passport');
 mongoose();
 var app = express();
 var passport = passport();
-
+var port = process.env.PORT || 5000;
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
@@ -26,6 +26,6 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-app.listen(3000, function () {
-  console.log("Express server listening on port 3000");
+app.listen(port, function () {
+  console.log("Express server listening on port ", port);
 });
