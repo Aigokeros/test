@@ -1,0 +1,31 @@
+
+
+.content div.slideShow{
+	position:relative;
+	height: 450px;
+	overflow:hidden;
+	
+}
+
+.content div.slideShow > ul{
+	list-style: none;
+
+}
+
+.content div.slideShow > ul > li{
+	position: absolute;
+	float:left;
+	transition: 2s;
+	transition-timing-function: linear;
+}
+
+.content div.slideShow > ul > li > img{
+	width :1400px;
+	height: 450px;
+	
+}
+
+.content div.slideShow div.badge{
+	left:47%;
+	padding-right:40px;
+}

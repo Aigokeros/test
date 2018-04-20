@@ -1,0 +1,54 @@
+
+.content div.news {
+	margin: 30px auto;
+}
+
+.content div.news > div{
+	width: 400px;
+	height: 200px;
+	background-color:#3532db;
+	border:1px solid #adadad;
+	float:left;
+	margin:0 20px;
+	color: white;
+	font-size:20px;
+	text-align:center;
+}
+
+
+
+.content div.news div:nth-child(1) p{
+	font-size:20px;
+}
+
+.content div.news div:nth-child(1) div{
+	border-radius:5px;
+	width:70%;
+	height:30%;
+	color:white;
+	border:1px solid #adadad;
+	margin: 0 auto;
+	font-size: 30px;
+	text-align:center;
+	line-height:55px;
+}
+
+.content div.news div:nth-child(2) p{
+	font-size:20px;
+	margin-top:10px;
+}
+
+.content div.news > div:nth-child(2){
+	text-align: left;
+	
+	position:relative;
+}
+
+.content div.news > div:nth-child(2) div.item_free{
+	width:130px;
+	height:130px;
+	right:40px;
+	top:50px;
+	background-color:black;
+	position:absolute;
+}

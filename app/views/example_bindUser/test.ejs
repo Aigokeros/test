@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hear World - Log In</title>
+<style>
+body{background-color: rgb(16,51,142);}
+</style>
+<link href='/css/main.css' rel='stylesheet' type ="text/css">
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+
+</head>
+<body>
+<p id="a">Click me away!</p>
+<p id="b">Click me too!</p>
+<script>
+	$(function(){
+    $("#a").click(function(){
+        $("#b").html("xxx")
+		
+		
+		
+		
+    		});
+			var target = "/download?fileName="+<%=rec[1].fileName %>;
+		$("#c").html(target);
+			});
+	</script>
+	<p id="c"></p>
+
+	<% for(i=0 ; i<rec.length; i++){ %>	
+		<p><%= rec[i].fileName %></p>
+			<a href="bucket/<%=rec[i].fileName%>" >โหลด</a>
+	<%}%>
+	
+	
+	</body>
+
+</html>

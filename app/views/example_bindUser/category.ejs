@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hear World - Category</title>
+<link href='/css/category.css' rel='stylesheet' type ="text/css">
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<body>
+
+<style>
+
+p{	
+	font-size: 28px;
+	font-family:JasmineUPC;
+	color: white;
+	text-align: right;
+}
+p2{
+	font-size: 30px;
+	font-family:JasmineUPC;
+	text-align: center;
+}
+p3{
+	font-size: 28px;
+	font-family:JasmineUPC;
+}
+p4{
+	font-size: 28px;
+	font-family:JasmineUPC;
+	color: gray;
+}
+
+h1{
+	font-family:JasmineUPC;
+}
+.textFile{
+	border: 1px solid: #3366CC;
+	font-size: 30px;
+	font-family:JasmineUPC;
+	color: #0033CC;
+}
+
+.textSub{
+	border: 1px solid: #3366CC;
+	font-size: 30px;
+	font-family:JasmineUPC;
+}
+footer{
+	max-width: 100%;
+	padding: 1em;
+	text-align: left;
+	clear: left;
+	background-color: gray;
+}
+
+lay{
+	float: left;
+	margin: 1%;
+	padding 1em;
+}
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover{background-color:#f5f5f5}
+</style>
+
+<footer><img src = "img/logo.png"> 
+<p><Strong>name:</Strong> <%=username%> / <a href="/logout"> ออกจากระบบ</a></p>
+</footer>
+<center>
+<p2><table border = 0 width = 600px>
+<tr><th style = "background-color: green;text-align: center"><a href="/main">หน้าหลัก</a></th>
+<th style = "background-color: blue;text-align: center"><a href="/category">หมวดหมู่</a></th>
+<th style = "background-color: green;text-align: center"><a href="/upload">อัพโหลดไฟล์เสียง</th>
+<th style = "background-color: blue;text-align: center"><a href="/contact">ติดต่อเรา</a></th></tr>
+</table></p2><br>
+
+<br>
+<input type = "checkbox"  name = "ch" value = "subject"  id = "c1" checked>วิชาการ<lay3></lay3>
+<input type = "checkbox"  name = "ch" value = "de" id = "c2"checked>สารคดี<lay3></lay3>
+<input type = "checkbox" class = "buttonText" name = "ch" value = "en"  id = "c3" checked>บันเทิง<br><br><br>
+ 
+<form id = "formSearch">
+<input type = "text" class = "textSearch" size = "30" id = "search" value = ""><br>
+</form>
+</center>
+
+<p style="color:black; font-size:40px;" id="test"></p> 
+<center>
+
+
+<div style= "height: 300px;width: 900px;display:block" id ="bigDiv1">
+
+<div id="d1" style = "float:left; width:300px" >
+
+	<tr><p style ="font-size:20; color:black; text-align:center"><Strong>	วิชาการ  </Strong> </p></tr>
+	<select name = "category" id="select_category" class = "textFile" style="float:left;"> 
+<option value = "science">วิทยาศาสตร์</option>
+<option value = "math">คณิตศาสตร์</option>
+<option value = "english">ภาษาอังกฤษ</option>
+</select>
+<p style = "display:block">s</p>
+	<table id="table1">
+	<% for(i=0; i<rec.length;i++){%>
+					<% if (rec[i].group.category==="วิชาการ" ){%>
+						<p style = "color:black; font-size:18; text-align:left;" id="listSubject"><%= rec[i].name %></p>
+						<a href="bucket/<%=rec[i].fileName%>" style = "line-height: 1px; margin-left:1em"  >เล่น</a>
+						<a href="bucket/<%=rec[i].fileName%>" style = "margin-left:5em" download>ดาวโหลด</a>
+				    <% } %>
+			  <% } %>
+		
+	</table>
+	
+</div> 
+
+<div id = "d2" style ="float:left; color:blue; width:300px;">
+<table id = "table2">
+
+<tr><p style ="font-size:20; color:black;text-align:center"><Strong>	สารคดี  </Strong> </p></tr>
+	<% for(i=0; i<rec.length;i++){%>
+		<% if (rec[i].group.category==="สารคดี"){%>
+			<p style = "color:black; font-size:18; text-align:left; ">สารคดี : <%= rec[i].name %></p>
+			<a href="bucket/<%=rec[i].fileName%>" style = "line-height: 1px;"  >เล่น</a>
+			<a href="bucket/<%=rec[i].fileName%>" style = "margin-left:5em" download>ดาวโหลด</a>
+				
+			<% } %>
+	<% } %>
+	
+	</table>
+</div>  
+
+
+<div id = "d3" style ="float:left; color:blue; width:300px;"> 
+<table id = "table3">
+	<tr><p style ="font-size:20; color:black;text-align:center"><Strong>	บันเทิง  </Strong> </p></tr>
+	<% for(i=0; i<rec.length;i++){%>
+		<% if (rec[i].group.category==="บันเทิง"){%>
+			<p style = "color:black; font-size:18; text-align:left">บันเทิง : <%= rec[i].name %></p>
+			<a href="bucket/<%=rec[i].fileName%>" style = "line-height: 1px;"  >เล่น</a>
+			<a href="bucket/<%=rec[i].fileName%>" style = "margin-left:5em" download>ดาวโหลด</a>
+				
+			<% } %>
+	<% } %>
+	</table>
+</div>
+
+</div> 
+<div style= "height: 300px;width: 900px;display:none" id ="bigDiv2">
+
+</div>
+<p id="test"></p>
+</center>
+
+<script>
+	$(document).ready(function(){
+		$("input[type=checkbox][name=ch]").click(function(){
+			if($("#c1").prop("checked")){
+				$("#d1").show("slow");
+			}else{
+				$("#d1").hide("slow");		
+			}
+			if($("#c2").prop("checked")){
+				$("#d2").show("slow");
+			}else{
+				$("#d2").hide("slow");		
+			}
+			if($("#c3").prop("checked")){
+				$("#d3").show("slow");
+			}else{
+				$("#d3").hide("slow");		
+			}
+		});
+	
+	 $("#search").keyup(function(event){
+
+		var search = $("#search").val();	
+		$.ajax({
+			type: 'GET',
+			url: '/search',
+			data: {mes:search},
+			success:function(res){
+			
+				if(res){
+					if(res.errMsg===true) search = res.msgError;
+					var result = document.getElementById('bigDiv2');
+					result.innerHTML = "<div><p style = 'color:black;font-size:25px;'><strong> ค้นหา :"+
+					search +
+					"</strong></p></div>";
+					
+					for(var i=0; i< res.length; i++){
+						result.innerHTML += "<p style = 'color:black; font-size:18; text-align:left;'>" + res[i].name
+						+ "</p>" +
+						"<a href='bucket/" + res[i].fileName + "' style = 'line-height: 1px;'>เล่น</a>"
+						+ "<a href='bucket/" +res[i].fileName + "' style = 'line-height: 1px;margin-left:5em;' download>ดาวโหลด</a>"
+					}
+				if($('#search').val()!=""){
+					$("#bigDiv1").css("display","none");
+					$("#bigDiv2").css("display","block");
+	
+				}else{
+					$("#bigDiv1").css("display","block");
+					$("#bigDiv2").css("display","none");
+				}
+					
+				}
+					
+			}
+		});
+		return false;
+	});
+
+	})
+	
+	
+</script>
+</body>
+</head>
+</html>

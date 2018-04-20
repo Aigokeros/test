@@ -1,0 +1,75 @@
+<html>
+	<head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	  <link rel="stylesheet" type="text/css" href="css/index.css">
+      <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	  <style type="text/css">
+	  div{
+		color: green
+	  }
+	  div a{
+		color: #9400ff
+	  }
+	  p {
+	 	color: red
+	  }
+	  
+	  ul a.inA{
+		color: yellow
+	  }
+	  
+	  ul li {
+		color: blue
+	  }
+	  
+	  ul li ul li {
+		color: black
+	  }
+	  
+	  
+	  </style>
+	</head>
+	
+	<body>
+	<p style ="font-size:30px; color:black"> INHERICE TEST </p>
+		<div>
+			<a> in div a </a>
+			<p style = "display:inline-block"> p inline block</p> 
+			<p style = "display:inline"> p inline </p>
+				<div>
+					in div div
+					<p> in div div p </p>
+						<ul>
+							<a class = "inA">  in ul a class A </a>
+							<a> //  in ul a </a>
+							<li> in ul li 
+								<ul>
+									in ul li ul
+									<li> in ul li ul li </li>
+								</ul>
+							</li>
+							
+						<ul>
+				</div>
+		</div>
+	
+	<p style ="font-size:30px; color:black"> LIST TEST </p>
+		<div style="background:#ffd0af; height: 120px"> 
+			<a> i'm a link</a>
+			<ul> 
+				PART OF LIST
+				<li> I always here</li>
+				<li> also here </li>
+			</ul>
+		</div>
+			
+			
+	<p style = "font-size:30px; color:black"> INSERT PIC TEST </p>
+		<div style = "display:inline-block; background:yellow; height:60px" class = ".clearfix"> 
+		<p style = "margin:0 auto"> Just testing
+			<a class = "resize" href = "#" style = "display:block; padding-left:30px;  margin-top:12px;  height:26px; line-height:6px;" > <img src = "images/icon/facebook2.png"/>  in tag a </a>
+			</p>
+		</div>
+	
+	</body>
+</html>

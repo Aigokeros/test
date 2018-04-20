@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>BILL PLEASE :: Good Food is Good Mood</title>
+        <link rel="stylesheet" type="text/css" href="css/page3.css">
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <div class="tab">
+            <div class="left">
+                <img class="icon_cook" src="images/cheficonweb1.png" width="25px" height="25px" />
+                <div class="text_logo">BILL PLEASE</div>
+            </div>
+            <div class="right">
+                <div class="search_box">
+                    <input type="text" class="search" id="search" />
+                    <div class="search_icon"><img class="icon_search" src="images/searchicon.png" width="20px" height="20px" /></div>
+                </div>
+                <img class="icon" src="images/user.png" width="25px" height="25px" />
+                <div class="text">Username</div>
+                <img class="icon" src="images/logouticon.png" width="25px" height="25px" />
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="result_tab">775 results for "coffee"</div>
+            <div class="content_left">
+                Filter By :
+                <br>
+                <br>
+                Grade
+                <section class="select_grade">
+                    <div class="col_left">
+                        <div class="input_box">
+                            <div class="box"></div>
+                            <input type="checkbox" name="a" id="a" value="a">
+                            <label for="a">A</label>
+                        </div>
+                        <div class="input_box">
+                            <div class="box"></div>
+                            <input type="checkbox" name="b" id="b" value="b">
+                            <label for="b">B</label>
+                        </div>
+                        <div class="input_box">
+                            <div class="box"></div>
+                            <input type="checkbox" name="c" id="c" value="c">
+                            <label for="c">C</label>
+                        </div>
+                    </div>
+                    <div class="col_right">
+                            <div class="input_box">
+                                <div class="box"></div>
+                                <input type="checkbox" name="n" id="n" value="n">
+                                <label for="n">N</label>
+                            </div>
+                            <div class="input_box">
+                                <div class="box"></div>
+                                <input type="checkbox" name="p" id="p" value="p">
+                                <label for="p">P</label>
+                            </div>
+                            <div class="input_box">
+                                <div class="box"></div>
+                                <input type="checkbox" name="z" id="z" value="z">
+                                <label for="z">Z</label>
+                            </div>
+                        </div>
+                </section>
+                <span style="">Cuisine</span>
+                <section class="select_cuisine">
+                    <div class="col_left">
+                        <div class="input_box">
+                            <div class="box"></div>
+                            <input type="checkbox" name="Chinesse" id="Chinesse" value="Chinesse">
+                            <label for="Chinesse">Chinesse</label>
+                        </div>
+                        <div class="input_box">
+                            <div class="box"></div>
+                            <input type="checkbox" name="Korean" id="Korean" value="Korean">
+                            <label for="Korean">Korean</label>
+                        </div>
+                        <div class="input_box">
+                            <div class="box"></div>
+                            <input type="checkbox" name="American" id="American" value="American">
+                            <label for="American">American</label>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="content_right">
+                <div class="fill_tab">
+                    <div class="first_tab">Name Bristro</div>
+                </div>
+
+                <div class="box_detail">
+                    <div class="detail">
+                        <div class="image">
+                            <div class="label_pro">
+                                <img src="images/saleicon.png" />
+                                <div class="text_pro">-20%</div>
+                            </div>
+                            Image
+                        </div>
+                        <div class="detail_product">
+                             
+							
+							 
+                        </div>
+                        <span class="topic">Enter Reservation details</span>
+
+                        <section class="input_detail">
+                            <div class="col_left" style="margin-right:100px;">
+                                <div class="line" >
+                                    <img class="img_topic" src="images/calendaricon1.png" width="30px" height="30px" />
+                                    <input type="text" class="input_detail_box" />
+                                </div>
+                            </div>
+                            <div class="col_right">
+                                <div class="line" >
+                                    <img class="img_topic" src="images/multipleicon.png" width="30px" height="30px" />
+                                    <input type="text" class="input_detail_box" />
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		
+		<script>
+		var mes;
+			$.ajax({
+			url : "/detail",
+			type : "POST",
+			data : {
+				name : localStorage.getItem('name_box')
+			},
+			success : function(data) {
+			
+				mes += `<div class="detail">
+							<div class="text">
+									<span class="txt_name">Name: ` + data.name + `</span><br>
+									<span class="txt_grade">Grade : ` + data.grade + `</span><br>
+									<span class="txt_cuisine">` + data.cuisine + `</span><br>
+									<span class="txt_lo">Address : ` + data.address.building + ` / `+ data.address.street + `</span>
+									<span class="txt_date">` + data.date + `</span><br>
+								</div>
+						</div>`;
+							
+							$('.detail_product').html(mes);
+			}
+		})
+		</script>
+		
+    </body>
+</html>

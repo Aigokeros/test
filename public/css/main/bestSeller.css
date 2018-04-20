@@ -1,0 +1,37 @@
+.bestSeller{
+	border:2px solid #686868;
+	margin-bottom: 10px;
+}
+
+.bestSeller > p{
+	text-align:center;
+	font-size:22px;
+	margin: 0;
+	padding: 5px;
+	border-bottom:2px solid #686868;
+}
+
+.bestSeller > .content{
+	
+	
+}
+
+.bestSeller > div.content > div:nth-child(1){
+	width:40%;
+	height: 260px;
+	float:left;
+}
+
+.bestSeller > div.content > div:nth-child(2){
+	
+	float:left;
+}
+
+.bestSeller > div.content > div:nth-child(2) > .amount{
+	width: 250px;
+	height: 30px;
+	border-radius: 10px;
+	background-color:blue;
+	
+
+}

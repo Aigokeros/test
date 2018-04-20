@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hear World - Log In</title>
+<link href= '/css/login.css' rel = 'stylesheet' type = 'text/css'>
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<style>
+body{background-color: rgb(16,51,142);}
+</style>
+</head>
+<body>
+		<br>
+		<footer>
+		<img src = "img/logo.png">
+		</footer>
+		<br>
+		<center><p2>
+		<table border = 0 align = "center" width = 450px height = 100px>
+		<form method = "POST" action = "/login">
+		<tr>
+		<p style = "font-size: 22px; color:red; align:center" ><%=message%></p>
+		<th>ชื่อผู้ใช้ </th>
+		<th><input type = "text" class = "textAcc" size = "30" name = "username" value = ""></th>
+		</tr>
+		<tr>
+		<th>รหัสผ่าน </th>
+		<th><input type = "password" class = "textPass" size = "30" name = "password" value = ""></th>
+		</tr>
+		</table></p2>
+		<br>
+		
+		<input style = "font-size: 30px;color: gray;font-family:JasmineUPC;text-align: left;" type = "submit" name = "login" value = "เข้าสู่ระบบ">
+		</form>
+		<br><br><br>
+		<a href = "/signup"> สร้างบัญชีผู้ใช้</a>
+		<lay3></lay3>
+		<a href = "/forgetPassword">ลืมรหัสผ่าน</a>
+		</center>
+</body>
+
+</html>

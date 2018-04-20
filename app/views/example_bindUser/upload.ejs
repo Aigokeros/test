@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hear World - Upload File</title>
+
+<link href='/css/upload.css' rel='stylesheet' type ="text/css">
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<body>
+<footer><img src = "img/logo.png"> 
+<p><Strong>name:</Strong> <%=username%> / <a href="/logout"> ออกจากระบบ</a></p>
+</footer>
+<script>
+		function fnB(){
+			location.href="/upload";
+		}
+</script>
+<center>
+<p2><table border = 0 width = 600px>
+<tr><th style = "background-color: green;text-align: center"><a href="/main">หน้าหลัก</a></th>
+<th style = "background-color: blue;text-align: center"><a href="/category">หมวดหมู่</a></th>
+<th style = "background-color: green;text-align: center"><a href="/upload">อัพโหลดไฟล์เสียง</th>
+<th style = "background-color: blue;text-align: center"><a href="/contact">ติดต่อเรา</a></th></tr>
+</table></p2><br>
+<br>
+<p3><table border = 0 >
+<% if(check===true){ %>
+	<p style="font-size:35px; color:green"> upload success.... thnak you very much.</p>
+<% } %>
+<form action="/upload" method="post" enctype="multipart/form-data">
+
+<tr><td> ชื่อไฟล์ </td><td> <input type = "text" class = "textFile" name = "name" value = ""/></td></tr>
+<tr><td>หมวดหมู่</td><td>
+<select name = "category" id = "myselect" class = "textFile"> 
+<option value = "1" id="m1">วิชาการ</option>
+<option value = "2" id = "m2">สารคดี</option>
+<option value = "3" id = "m3">บันเทิง</option>
+</select>
+<p id="test"> </p>
+</td></tr>
+<tr><td></td><td>
+<div id = "gg">
+	<input type = "radio" name = "subject" value = "math">คณิตศาสตร์ <br>
+	<input type = "radio" name = "subject" value ="science">วิทยาศาสตร์ <br>
+	<input type = "radio" name = "subject" value ="english">ภาษาอังกฤษ <br>
+	</div>
+</td></tr>
+<tr><td>ไฟล์เสียง</td><td> 
+<input type="file" name="file">
+</td></tr>
+</table></p3><br><br> 
+	<input style = "color:blue" class = "textFile" type = "submit" value = "ยืนยัน" />
+	<lay3 style = "margin: 5%;padding 1em;"></lay3>
+	<button style = "color: red;font-size: 30px;font-family:JasmineUPC;" type = "button" onClick="JavaScript:fnB();"> ยกเลิก </button>
+	
+	<script>
+	$(document).ready(function(){
+	$("#myselect").change(function(){
+		var check = $( "#myselect option:selected" ).val();
+			if(check==="1"){
+				
+				$("#gg").slideDown();	
+			}else{
+				
+				$("#gg").slideUp();
+			}
+		})
+	});
+	</script>
+</form>
+</center>
+</body>
+</head>
+</html>

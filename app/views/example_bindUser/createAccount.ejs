@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hear World - Created Account</title>
+
+<link href='/css/createUser.css' rel='stylesheet' type ="text/css">
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<body>
+			<script>
+				function fnB(){
+					location.href="/";
+				}
+			</script>
+	<br>
+	<footer>
+	<img src = "img/logo.png">
+	</footer>
+	<br>
+	<p style = "font-size: 22px; color:red; align:center" ><%=message%></p>
+    <p>สร้างบัญชีผู้ใช้</p>
+	<form style = "text-align:center action = "/signup" method="POST">
+	<br><p2><table border = 0 align = "center">
+		<tr>
+			<td>ชื่อผู้ใช้</td><td><input type = "text" class = "textAcc" size = "30" name = "username" value = ""/></td>
+		</tr>
+		<tr>
+			<td>ชื่อจริง</td><td><input type = "text" class = "textAcc" size = "30" name = "firstName" value = ""/></td>
+		</tr>
+		<tr>
+			<td>นามสกุล</td><td><input type = "text" class = "textAcc" size = "30" name = "lastName" value = ""/></td>
+		</tr>
+		<tr>
+			<td>รหัสผ่าน</td><td><input type = "password" class = "textPass" size = "30" name = "password" value = ""/></td>
+		</tr>
+		<tr>
+			<td>อีเมล</td><td><input type = "email" class = "textMail" size = "30" name = "email" value = ""/></td>
+		</tr>
+		<tr>
+			<td>เบอร์โทรศัพท์</td><td><input type = "text" class = "textPhone" size = "30" name = "phone" value = ""/></td>
+		</tr>
+	</table></p2><br>
+	<div style ="text-align:center">
+		<input style = "color:blue" class = "textSub" type = "submit" value = "ยืนยัน" />
+		<lay3></lay3>
+		<button style = "color: red;font-size: 30px;font-family:JasmineUPC;" type = "button" onClick="JavaScript:fnB();"> ยกเลิก </button>
+		</div>
+	</form>
+</body>
+</head>
+</html>
