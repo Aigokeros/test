@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 module.exports = function(){
 	mongoose.set('debug', config.debug);
 	
-	var db = mongoose.connect(config.mongoUri);
+	var db = mongoose.connect(process.env.MONGOLAB_URI || config.mongoUri);
 	
 	mongoose.connection.on('connected', function() {
     	console.log('Mongoose connected to ' + config.mongoUri);
