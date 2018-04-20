@@ -1,5 +1,5 @@
 //var record = require('mongoose').model('Record');
-var fs = require("fs");
+//var fs = require("fs");
 
 exports.render = function(req, res){
 
