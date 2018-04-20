@@ -24,8 +24,6 @@ module.exports = function(){
 
 		if(process.env.NODE_ENV === 'development'){
 				app.use(logger('dev'));
-		}else{	
-			//	app.use(compression);
 		}
 		
 	
