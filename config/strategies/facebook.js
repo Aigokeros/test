@@ -1,11 +1,11 @@
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
-var config = require('../config');
-var user = require('../../app/controllers/user.controller');
+var config = require('../config.js');
+var user = require('../../app/controllers/user.controller.js');
 
 module.exports = function(){
     passport.use(new FacebookStrategy({
-        clientID: '277560409449230',
+        clientID: config.facebook.clientID,
         clientSecret: config.facebook.clientSecret,
         callbackURL : config.facebook.callbackURL,
         profileFields: ['id', 'email', 'name'],
