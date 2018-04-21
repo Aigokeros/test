@@ -39,7 +39,7 @@ module.exports = function(){
 		app.use(express.static('./public'));
 		
 		
-		require('../app/routes/index.routes.js')(app);
+	//	require('../app/routes/index.routes.js')(app);
 		require('../app/routes/user.routes.js')(app);
 		return app;
 }
