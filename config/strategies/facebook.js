@@ -5,7 +5,7 @@ var user = require('../../app/controllers/user.controller');
 
 module.exports = function(){
     passport.use(new FacebookStrategy({
-        clientID: config.facebook.clientID,
+        clientID: '277560409449230',
         clientSecret: config.facebook.clientSecret,
         callbackURL : config.facebook.callbackURL,
         profileFields: ['id', 'email', 'name'],
