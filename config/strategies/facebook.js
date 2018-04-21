@@ -5,8 +5,8 @@ var user = require('../../app/controllers/user.controller.js');
 
 module.exports = function(){
     passport.use(new FacebookStrategy({
-        clientID: '277560409449230',
-        clientSecret: '682df626d836799dee1a751b922fccb5' , // form a
+        clientID: '277560409455530',
+        clientSecret: '682df626d855599dee1a751b922fccb5' , // form a
         callbackURL : 'https://mysterious-plains-29409.herokuapp.com/oauth/facebook/callback',
         profileFields: ['id', 'email', 'name'],
         passReqToCallback: true
