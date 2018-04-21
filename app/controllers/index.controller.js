@@ -7,23 +7,15 @@ exports.render = function(req, res){
 							message2:'This work!'
 							//'isLoggedIn':isLoggedIn
 	    });*/
-		res.render('chic_girl');
+		res.render('chic_girl.ejs');
 }
 //ทำอะไร (ฟังก์ชัน)
 
 exports.product = function(req, res){
-	res.render('product');
+	res.render('product.ejs');
 }
 
 exports.renderHome = function(req,res){
-	res.render('test');
+	res.render('test.ejs');
 }
 
-exports.test = function(req,res){
-	record.find(function(err,data){
-		if(err) console.log(err)
-		console.log(data);
-		res.render('test',{msg:"hello world", title:"title", rec:data});
-	});
-	
-}
