@@ -41,9 +41,6 @@ exports.filter = function(req, res){
 	});
 }
 
-exports.list = function(req, res){
-	res.render('list', {title:'SEARCH', description:'THIS IS LIST PAGE'});
-}
 
 exports.DetailList = function(req, res){
 	
