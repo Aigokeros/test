@@ -40,6 +40,7 @@ window.fbAsyncInit = function() {
        FB.getLoginStatus(function(response) {
         if (response.status === "connected") {
           alert('เข้าสู่ระบบด้วย Facebook สำเร็จ');
+          setInfo();
        } else {
             alert('เข้าสู่ระบบด้วย Facebook ไม่สำเร็จ');
        }
@@ -59,7 +60,7 @@ window.fbAsyncInit = function() {
       });
        
 
-  function testAPI() {
+  function setInfo() {
       console.log('Welcome!  Fetching your information.... ');
       FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
@@ -76,5 +77,6 @@ window.fbAsyncInit = function() {
 
  function login(){
     FB.login(function(response) {
+        checkLoginState();
       }, {scope: 'public_profile,email'});
 }
