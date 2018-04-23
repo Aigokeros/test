@@ -7,7 +7,7 @@ module.exports = function(){
     passport.use(new FacebookStrategy({
         clientID: '277560409449230',
         clientSecret: '682df626d836799dee1a751b922fccba' , // form a
-        callbackURL : 'https://mysterious-plains-29409.herokuapp.com/oauth/facebook/callback',
+        callbackURL : 'https://www.chicgirl4you.com/oauth/facebook/callback',
         profileFields: ['id', 'email', 'name'],
         passReqToCallback: true
     }, function(req, accessToken, refreshToken, profile, done){
