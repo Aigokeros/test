@@ -189,3 +189,13 @@ h1, h2, h3, form, div,a, ul, b{
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome and Opera */
   }
+
+.login:hover{
+	color:#e5e247;
+	cursor: pointer;
+}
+
+.logout:hover{
+	color:#e5e247;
+	cursor: pointer;
+}
