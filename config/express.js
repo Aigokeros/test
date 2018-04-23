@@ -5,7 +5,7 @@ var cookieSession = require('cookie-session');
 var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('passport');
-var enforce = require('express-sslify');
+//var enforce = require('express-sslify');
 
 module.exports = function(){
 
@@ -27,7 +27,7 @@ module.exports = function(){
 				app.use(logger('dev'));
 		}
 		
-		app.use(enforce.HTTPS());
+		//app.use(enforce.HTTPS());
 		app.use(bodyParser.urlencoded({extended:true}));
 		app.use(bodyParser.json());
 		app.use(flash());
