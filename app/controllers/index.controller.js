@@ -27,8 +27,8 @@ exports.chatbotRes = function(req,res){
 	
 	aiml.parseDir('./public/bot', function(err, topics){
 		var engine = new aiml.AiEngine('Default', topics, {name: 'Jonny'});
-		var responce = engine.reply({name: 'Billy'}, "HEY BRO", function(err, response){
-			console.log(response);
+		var responce = engine.reply({name: 'Billy'}, req.body.text, function(err, response){
+				res.json({message:response});
 		});
 	  });
 }

@@ -1,13 +1,33 @@
 <html>
-	
 <head>
+
 		<meta http-equiv = "Content-Type" content= "text/html; charset-UTF8"/>
 		<title> nfShop :: you be what's your make. </title>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	
 </head>
 <body>
 	<p> Hey I'm chat bot</p>
-	<form action = "/chatbot" method="post"><input type = "text" name = "text" id = "text" /><button value = "send">send</button></form>
-	 
+	<input type = "text" name = "tt" id = "text" value="haha"/><p class = "go">send</p>
+	 <span> Bot : </span> <p class = "bot"></p>
+	 <span> Text send : </span> <p class = "send"></p>
+	<script>
+		
+		
+		$('.go').click(function(){
+			var msg = $("input[type=text][name=tt]").val();
+			$('.send').text($("input[type=text][name=tt]").val());
+		$.ajax({
+			url: "/chatbot",
+			type: "POST",
+			data:{
+				text : msg
+			},
+			success : function(data){
+				$(".bot").text(data.message);
+			}
+		});
+		});
 
+	</script>
 </body>
