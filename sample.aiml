@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<aiml version="1.0.1" encoding = "UTF-8"?>
+   <category>
+      <pattern> HELLO ALICE </pattern>
+      <template>
+         Hello User
+      </template>
+   </category>
+   
+   <category>
+      <pattern> How are you </pattern>
+      <template>
+         I'm fine. so what about you?
+      </template>
+   </category>
+   
+   <category>
+      <pattern> what do you think about</pattern>
+      <template>
+         you are always smart and genuis don't worry.
+      </template>
+   </category>
+   
+   <category>
+      <pattern> So </pattern>
+      <template>
+			if you means eiq and pub they very ugly.
+      </template>
+   </category>
+</aiml>

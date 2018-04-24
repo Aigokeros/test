@@ -1,4 +1,5 @@
-
+var AIMLInterpreter = require('AIMLInterpreter');
+var aiml = require('aiml');
 exports.render = function(req, res){
 
 		/*res.render('login',{title:'How about you',
@@ -19,3 +20,28 @@ exports.renderHome = function(req,res){
 	res.render('test.ejs');
 }
 
+exports.chatbot = function(req, res){
+	res.render('chatbot.ejs');
+}
+
+exports.chatbotRes = function(req,res){
+	
+	aiml.parseDir('./public/bot', function(err, topics){
+		var engine = new aiml.AiEngine('Default', topics, {name: 'Jonny'});
+		var responce = engine.reply({name: 'Billy'}, "HEY BRO", function(err, response){
+			console.log(response);
+		});
+	  });
+}
+
+/*exports.chatbotRes = function(req,res){
+	console.log(req.body.text);
+	var aimlInterpreter = new AIMLInterpreter({name: 'alice', age:'42'});
+	aimlInterpreter.loadAIMLFilesIntoArray(['./public/bot/test.aiml']);
+	console.log("name : " +aimlInterpreter.name);
+	console.log("new line : " + aimlInterpreter);
+	var callback = function(answer, wildCardArray, input){
+	console.log(answer + ' | ' + wildCardArray + ' | ' + input);
+	};
+	aimlInterpreter.findAnswerInLoadedAIMLFiles(req.body.text, callback);
+}*/
