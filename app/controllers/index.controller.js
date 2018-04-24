@@ -1,4 +1,3 @@
-var AIMLInterpreter = require('AIMLInterpreter');
 var aiml = require('aiml');
 exports.render = function(req, res){
 
@@ -34,14 +33,3 @@ exports.chatbotRes = function(req,res){
 	  });
 }
 
-/*exports.chatbotRes = function(req,res){
-	console.log(req.body.text);
-	var aimlInterpreter = new AIMLInterpreter({name: 'alice', age:'42'});
-	aimlInterpreter.loadAIMLFilesIntoArray(['./public/bot/test.aiml']);
-	console.log("name : " +aimlInterpreter.name);
-	console.log("new line : " + aimlInterpreter);
-	var callback = function(answer, wildCardArray, input){
-	console.log(answer + ' | ' + wildCardArray + ' | ' + input);
-	};
-	aimlInterpreter.findAnswerInLoadedAIMLFiles(req.body.text, callback);
-}*/
