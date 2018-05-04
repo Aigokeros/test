@@ -5,6 +5,7 @@ var cookieSession = require('cookie-session');
 var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('passport');
+var sslRedirect = require('heroku-ssl-redirect');
 //var enforce = require('express-sslify');
 
 module.exports = function(){
@@ -27,6 +28,7 @@ module.exports = function(){
 				app.use(logger('dev'));
 		}
 		
+		app.use(sslRedirect());
 		//app.use(enforce.HTTPS());
 		app.use(bodyParser.urlencoded({extended:true}));
 		app.use(bodyParser.json());
