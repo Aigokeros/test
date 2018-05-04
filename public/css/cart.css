@@ -1,0 +1,73 @@
+div.menu_payment{
+    line-height: 38px;
+    background-color: white;
+    borer: 1px solid;
+}
+
+div.list_payment > ul{
+    list-style: none;
+    position: relative;
+}
+
+div.list_payment > ul > li{
+    float: left;
+    margin:0;
+    padding:0;
+    border: 1px solid #d3f8de;
+}
+
+div.list_payment > ul > li > a {
+    display:block;
+    float: left;
+    padding:0 65px;
+}
+
+div.list_cart{
+ 
+}
+
+div.list_cart > .product_in_cart li{
+
+    list-style: none;
+    padding: 50px;
+}
+
+.left{
+    float: left;
+}
+
+.left > img{
+    width: 300px;
+    height: 300px;
+}
+
+.right{
+    float: left;
+    margin-left: 50px;
+}
+
+.amount >  a{
+    width: 15px;
+    display: inline-block;
+   text-align: center;
+    border: 1px solid;
+    background-color: white;
+}
+
+.amount >  a:hover{
+    cursor: pointer;
+    background-color: darkturquoise;
+}
+
+div.payment .content{
+    all:unset;
+    float: right;
+    
+}
+
+div.payment .content > div{
+    height: 40px;
+    background-color: springgreen;
+    float: left;
+    line-height: 40px;
+}

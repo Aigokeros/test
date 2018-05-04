@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <meta http-equiv = "Content-Type" content= "text/html; charset-UTF8"/>
+        <title> nfShop :: you be what's your make. </title>
+        <link rel = "stylesheet" type = "text/css" href = "css/chic_girl.css">
+        <link rel = "stylesheet" type = "text/css" href = "css/header.css">
+        <link rel = "stylesheet" type = "text/css" href = "css/cart.css">
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    </head>
+    <body> 
+        <div class = "document">
+            <div class = "Header"> 
+                <div class = "header_top">
+                    <div class ="new_wrapper">
+                        <div class = "left_header_top">	
+                            <ul>
+                            <li> <a class = "facebook"> <img src= "images/icon/facebook.png" /> </a> </li>
+                            <li> <a class = "Line"> <img src= "images/icon/line.png" /> @ChicGirl </a> </li>
+                            <li> <a class = "phone"> <img src= "images/icon/phone.png" style = "width:16px; height:16px;" /> 08x-xxxxxx </a> </li>
+                            </ul>
+                        </div>
+                        <div class = "right_header_top">
+                
+                            <div class = "language">
+                            <a> TH </a>
+                            <a> EN </a>
+                            </div>
+                            
+                            <ul>
+                                <li> <a class = "login"  onclick= "login()"> login </a>  </li>  
+                                <li> <span class = "line"> </span> </li>
+                                <li> <a href=""> สมัครสมาชิก </a>  </li>
+                                <li> <span class = "line"> </span> </li>						
+                                <li> <a href=""> ชำระเงิน </a>  </li> 	
+                            </ul>
+                            <p id ="name"> I'm here </p>
+                            <a class = "logout" onclick="logout()"> ออกจากระบบ </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class = "header_middle ">
+                    <div class = "new_wrapper clearfix">
+                        <div class = "left ">
+                             <img class = "logo" src = "" />
+                        </div>
+                        
+                        <div class = "middle">
+                            <div class = "search_item clearfix "> 
+                                <form class = "search_form" action = "" target ="" method = "">
+                                    <input type = "text" name = "search" placeholder = "Search...">
+                                    <a class = "search_button" href = "javascript:void(0)"> Search </a>
+                                </form>
+                                <a id = "mic" class = "noselect fa fa-microphone" onclick = "startConv()"> </a>
+                            </div>
+                            <div class = "catagory">
+                                <ul>
+                                    <li> <a href =""> I'm yours </a></li>
+                                    <li> <a href ="">too good at good bye </a></li>
+                                    <li style="border:none"> <a href ="">sad song </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class = "right clearfix">
+                            <div class = "car">   
+                                <b > ส่งฟรี   </b> 
+                                <b style = "display:block; line-height:0px">  เมื่อซื่อสินค้าครบ 3 ชิ้น </b>
+                            </div>
+                            
+                            <div class = "cart">
+                                <b>ซื้อเลย </b>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class = "header_bottom">
+                    <div class = "menu_bar new_wrapper_menu">
+                        <ul class = "menu clearfix">
+                            <li>
+                                <div class="list_menu_item ">
+                                    <p> <img src="images/icon/list.png" /> รายการสินค้า  </p>
+                                </div>
+                                <div class="sub_menu_item">
+                                    <div><a style = "background:url(../images/icon/face.png) no-repeat;background-position:0px 7px; background-size:30px 30px;"> ผิวหน้า</a> </div>
+                                    <div><a style = "background:url(../images/icon/makeup.png) no-repeat;background-position:0px 4px; background-size:40px 40px;"> เมคอัพ</a> </div>
+                                    <div><a style = "background:url(../images/icon/skin.png) no-repeat;background-position:0px 7px; background-size:30px 30px;"> ผิวกาย </a> </div>
+                                    <div><a style = "background:url(../images/icon/perfume.png) no-repeat;background-position:0px 7px; background-size:30px 30px;"> น้ำหอม</a> </div>
+                                    <div><a style = "background:url(../images/icon/healty.png) no-repeat;background-position:0px 7px; background-size:30px 30px;"> อาหารเสริม</a> </div>
+                                    <div><a style = "background:url(../images/icon/bush.png) no-repeat;background-position:0px 7px; background-size:30px 30px;">แปรงและอุปกรณ์ </a> </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href = ""> หน้าหลัก </a>
+                            </li>
+                            <li>
+                                <a href = ""> เคาเตอร์แบรนด์ </a>
+                            </li>
+                            <li>
+                                <a href = ""> สินค้าแนะนำจากคนดัง </a>
+                            </li>
+                            <li>
+                                <a href = ""> สินค้ามาไหม่ </a>
+                            </li>
+                            <li>
+                                <a href = ""> รีวิวสินค้า  </a>
+                            </li>
+                            <li>
+                                <a href = ""> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div> <!-- end header-->
+            <div class = "content">
+                <nav class ="nav"> navigate</nav>
+                <div class = "menu_payment ">
+                    <div class = "list_payment new_wrapper_menu">
+                        <ul class = "clearfix">
+                            <li> <a> ตระกร้าสินค้า </a> </li>
+                            <li> <a> ช่องทางชำระสินค้า </a> </li>
+                            <li> <a> ยืนยันการชำระ </a> </li>
+                            <li> <a> แจ้งโอนสินค้า </a> </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class = "list_cart">
+                    <div class = "product_in_cart new_wrapper_menu">
+                        <ul>
+                            <li class = "clearfix">
+                                    <div class="left">
+                                        <img src= "/">
+
+                                    </div>
+                                    <div class = "right">
+                                        <p> ชื่อสินค้า </p>
+                                        <div class = "amount"><span> จำนวน </span> <a>+</a><input type = "text" value = "1" style="width:30px; text-align:center; background-color:blanchedalmond" readonly><a>-</a> </div>
+                                        <span>รหัสส่วนลด</span> <input type = "text">
+                                        <p> ราคา xxx  บาท</p>
+                                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class = "payment">
+                        <div class = "new_wrapper_menu">
+                            <div class = "content clearfix">
+                                    <p style = "text-align: right;">รวมทั้งหมด xx.xx บาท</p>
+                                    <div> ยกเลิกทั้งหมด </div> <div> ยืนยันรายการ </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "right_bar">
+                <div class = "new_wrapper_bar">
+                    <ul> 
+                        <li class = "crop" onmouseover="balloonIn(0)" onmouseleave="balloonOut(0)"> <a href = "" style = "background-image:url(images/icon/user.png)"> </a>  <div class = "balloon"> <p> user </p> <span class = "arrow"> </span>  </div>  </li>
+                        <li class = "crop" onmouseover="balloonIn(1)" onmouseleave="balloonOut(1)"> <a href = "" style = "background-image:url(images/icon/search.png)"> </a>  <div class = "balloon"> <p> search </p> <span class = "arrow"> </span>  </div>  </li>
+                        <li class = "crop" onmouseover="balloonIn(2)" onmouseleave="balloonOut(2)"> <a href = "" style = "background-image:url(images/icon/cart.png)"> </a> <div class = "balloon"> <p> cart </p> <span class = "arrow"> </span>  </div>  </li>
+                        <li class = "crop" onmouseover="balloonIn(3)" onmouseleave="balloonOut(3)"> <a href = "" style = "background-image:url(images/icon/calendar.png)"> </a> <div class = "balloon"> <p> schedule </p> <span class = "arrow"> </span>  </div>  </li>
+                        <li class = "crop" onmouseover="balloonIn(4)" onmouseleave="balloonOut(4)"> <a href = "" style = "background-image:url(images/icon/hearts.png)"> </a> <div class = "balloon"> <p> favarite </p> <span class = "arrow"> </span>  </div>  </li>
+                        <li class = "crop" onmouseover="balloonIn(5)" onmouseleave="balloonOut(5)"> <a href = "" style = "background-image:url(images/icon/chat.png)"> </a> <div class = "balloon"> <p> chat </p> <span class = "arrow"> </span>  </div>  </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+
+    <footer>
+        <script type="text/javascript" src="js/chic_girl.js"></script>
+    </footer>
+</html>
