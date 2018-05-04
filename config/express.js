@@ -29,7 +29,7 @@ module.exports = function(){
 		}
 		
 		
-		app.use(enforce.HTTPS());
+	//	app.use(enforce.HTTPS());
 		app.use(bodyParser.urlencoded({extended:true}));
 		app.use(bodyParser.json());
 		app.use(flash());
