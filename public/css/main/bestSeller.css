@@ -11,14 +11,11 @@
 	border-bottom:2px solid #686868;
 }
 
-.bestSeller > .content{
-	
-	
-}
+
 
 .bestSeller > div.content > div:nth-child(1){
 	width:40%;
-	height: 260px;
+	height: 300px;
 	float:left;
 }
 
@@ -35,3 +32,4 @@
 	
 
 }
+

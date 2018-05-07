@@ -1,16 +1,26 @@
+var hot_deal_detail =  [
+						{"src": "p1.png","name":"BIOTHERM_Life_Plankton_Mask","price":"199","sale":"399"},
+						{"src": "p4.png","name":"Kohaku_Hada_Face_Lotion_Refreshing","price":"460","sale":"480"},
+						{"src": "p6.png","name":"LoveLuv-M_SUIT_All_-In_-One_Essense_100_ml","price":"500","sale":"2490"},
+						{"src": "p2.png","name":"BK_Acne_Mask","price":"288","sale":"689"}
+					];
+
+				
 var content = "<ul>";
 for(var i=0; i<4 ;i++){
 	content += 	`<li> 
-						<div> <img  src = "images/bestSeller/goods.png"/> </div>
+						<div> <img  src = "images/fake/`+hot_deal_detail[i].src+`"/> </div>
 						<div class = "item"> 
-							<p> ชื่อสินค้า </p>
-							<p> ราคา </p>
+							<p>`+ hot_deal_detail[i].name + `</p>
+							<p style = 'text-decoration:line-through;'>`+hot_deal_detail[i].sale + `</p>
+							<span>`+ hot_deal_detail[i].price +`</span>
 							<div class = "shopping"> ช๊อบเลย </div>
 						</div>
 					</li>`
 }
 
-content += `<span class = "show_all"> </span> </ul>`;
+content += `	<span id = "left" onclick="scroll_hotdeal(-1)"> < </span>
+<span id = "right" onclick="scroll_hotdeal(1)"> > </span> </ul>`;
 
 $('div.hot_deal div.content ').html(content);
 

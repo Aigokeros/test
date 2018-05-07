@@ -1,47 +1,55 @@
 
 .content div.news {
 	margin: 30px auto;
+	display:flex;
 }
 
 .content div.news > div{
-	width: 400px;
-	height: 200px;
-	background-color:#3532db;
-	border:1px solid #adadad;
+	position:relative;
 	float:left;
 	margin:0 20px;
 	color: white;
 	font-size:20px;
 	text-align:center;
+	flex:1;
 }
 
 
-
-.content div.news div:nth-child(1) p{
+.content div.news > div > div{
 	font-size:20px;
-}
-
-.content div.news div:nth-child(1) div{
-	border-radius:5px;
-	width:70%;
-	height:30%;
-	color:white;
-	border:1px solid #adadad;
-	margin: 0 auto;
-	font-size: 30px;
-	text-align:center;
-	line-height:55px;
-}
-
-.content div.news div:nth-child(2) p{
-	font-size:20px;
-	margin-top:10px;
-}
-
-.content div.news > div:nth-child(2){
-	text-align: left;
+	position: absolute;
 	
-	position:relative;
+}
+
+
+.content div.news > div.new_goods > div{
+	padding:0 10px;
+	height: 40px;
+	top: 65%;
+	left: 40%;
+	background-color:black;
+	color:white;
+	font-size:14px;
+	line-height: 40px;
+	font-weight: bold;
+}
+
+.content div.news > div.then_free > div{
+	background-color: rgb(192, 7, 7);
+	color: white;
+	width:140px;
+	top: 45%;
+	left: 32%;
+	white-space: nowrap;
+	border-radius: 15px;
+	line-height: 50px;
+}
+
+
+
+.content div.news  img{
+	width: 300px;
+	height: 300px;
 }
 
 .content div.news > div:nth-child(2) div.item_free{

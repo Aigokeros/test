@@ -13,26 +13,83 @@ div.product{
 		
 }
 
+
+
 div.product > .left{
 	float: left;
 }
 
 
 div.product > .left > img{
-	width: 250px;
+	width: 500px;
 	height: 300px;
 	display: block;
 	margin: 5px;
+	border: 1px solid rgb(79, 78, 78, 0.2);
 }
+
+div.product > .left > .product_amount{
+	position: relative;
+	margin-left: 10px;
+	width: 50px;
+	height: 20px;
+	background-color:rgb(0, 86, 224,0.8);
+}
+
+div.product > .left > .contain_rating{
+	position: relative;
+	height: 30px;
+	margin-left: 10px;
+}
+
+div.product > .left > .contain_rating  .avg_rating{
+	color: #ff1500;
+}
+
 
 div.product > .right{
 	display: inline-block;
 	float:left;
-	margin-left: 30px;
+	margin-left: 10px;
+	width:375px;
+	zoom: 115%;
 }
 
-div.product > .right > p{
+div.product > .right > .detail_product{
+	padding:0;
+	margin: 0;
+	display:inline-block;
+}
+
+div.product > .right > div.review_audio{
+	margin-top:10px;
+	position:relative;
+	width: 150px;
+}
+
+div.product > .right > div.review_audio > .audio{
 	
+}
+
+
+div.product > .right > div.review_audio > img{
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: -10px;
+	right: 0;
+}
+
+div.product > .right > .price {
+	text-decoration: line-through;
+	color: #333333;
+	font-size:16px;
+	display:inline;
+}
+
+div.product > .right >  .sell{
+	color:#3866ff;
+	font-size: 20px;
 }
 
 div.product .basket{
@@ -49,7 +106,9 @@ div.product .basket{
 .rating { 
   border: none;
   float: left;
+  padding:0px;
 }
+
 
 .rating > input { display: none; } 
 .rating > label:before { 

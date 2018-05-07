@@ -28,8 +28,7 @@ module.exports = function(){
 				app.use(logger('dev'));
 		}
 		
-		app.use(sslRedirect());
-	//	app.use(enforce.HTTPS());
+		app.use(sslRedirect());   
 		app.use(bodyParser.urlencoded({extended:true}));
 		app.use(bodyParser.json());
 		app.use(flash());

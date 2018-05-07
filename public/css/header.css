@@ -101,8 +101,18 @@ div.header_top{
 .header_middle{
 	margin: 0;
 	width: 100%;
-	padding: 18px 0;
+	padding: 8px 0;
 	background-color: #ffffff;
+}
+
+.header_middle > div > .top{
+	padding-left: 35%;
+}
+
+.header_middle > div > .top > .logo{
+	width: 250px;
+	height: 200px;
+	margin-top:-50px;
 }
 
 .header_middle > div > .left{
@@ -122,6 +132,23 @@ div.header_top{
 	margin-left: 100px;
 }
 
+.header_middle > div > .center{
+	margin-left: 3%;
+	margin-top: -45px;
+	width:700px;
+	float:left;
+}
+
+
+.header_middle > div > .center > img.truck{
+	width:250px;
+	height:100px;
+	margin-top: -20px;
+	margin-right:40px;
+	float: left;
+}
+
+
 .header_middle div form input[type=text]{
 	float:left;
 	width: 300px;
@@ -131,30 +158,31 @@ div.header_top{
 	background:url(../images/icon/search.png) no-repeat;
 	background-size: 15px 15px;
 	background-position: 5px 9px;
-	border: 2px solid #0098f7;
+	border: 2px solid #ff5465;
 }
 
-.header_middle div >.middle > .search_item{
+.header_middle div > .center > .search_item{
 	position: relative;
+	float:left;
 }
 
-.header_middle div >.middle > .search_item form .search_button{
-	background-color:#0098f7;
+.header_middle div >.center > .search_item form .search_button{
+	background-color:#ff5465;
 	height: 38px;
 	line-height: 34px;
 	text-align:center;
 	padding: 0 8px;
 	display: inline-block;
-	border: 2px solid #0098f7;
+	border: 2px solid #ff5465;
 	text-decoration:none;
 	color:white;
 }
 
-.header_middle div > .middle > .catagory ul{
+.header_middle div > .center > .catagory ul{
 	list-style: none;
 }
 
-.header_middle div > .middle > .catagory ul > li{
+.header_middle div > .center > .catagory ul > li{
 	float:left;
 	margin:3px 5px;
 	color: #c4c4c4;
@@ -162,30 +190,18 @@ div.header_top{
 	border-right: 1px solid #595959;
 }
 
-.header_middle div > .middle > .catagory ul > li:hover{
+.header_middle div > .center > .catagory ul > li:hover{
 	text-decoration: underline;
 	color: #0019db;
 }
 
 .header_middle > div > .right{
 	float: left;
-	margin-left: 90px;
+	margin-left: 35px;
 	display:inline;
-	height:60px;
-	width: 120px;
 	line-height:65px;
 	position:relative;
-}
-
-.header_middle > div > .right  .car{
-	display: inline-block;
-	background:url(../images/icon/vehicle.png) no-repeat;
-	background-position:50px 0;
-	width:150px;
-	height:60px;
-	position: relative;
-	float:left;
-
+	margin-top: -50px;
 }
 
 .header_middle > div > .right  b{
@@ -197,22 +213,35 @@ div.header_top{
 
 .header_middle > div > .right .cart{
 		display: inline-block;
-		background:url(../images/icon/cart2.png) no-repeat;
-		background-position:50px 15px;
+		background:url(../images/icon/cart3.png) no-repeat;
+		background-position:0px 15px;
 		background-size:40px 40px;
-		position:absolute;
-		left:200px;
-		width:150px;
+		position:relative;
+		width:60px;
 		height:60px;
 		margin:0;
 		padding:0;
 		float:left;
 }
 
+.header_middle > div > .right .cart > a{
+	width:30px;
+	height:30px;
+	background-color: #fc142b;
+	color:white;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 30px;
+	position:absolute;
+	left:15px;
+}
+
+
+
 .header_bottom{
 	line-height: 38px;
 	color:#f2f2f2;
-	background-color: #0098f7;
+	background-color: #e53953;
 	border-bottom: 1px solid #777777;
 	
 }
@@ -229,12 +258,12 @@ div.header_top{
 }
 
 .header_bottom > .menu_bar > ul.menu div.list_menu_item{
-	background-color:#85ccf2;
+	background-color:#ff5b74;
 }
 
 .header_bottom > .menu_bar > ul.menu div.sub_menu_item{
 	position:absolute;
-	background-color:#85ccf2;
+	background-color:#f74761;
 	z-index:999;
 	display:none;
 }
@@ -255,7 +284,7 @@ div.header_top{
 }
 
 .header_bottom > .menu_bar > ul.menu div.sub_menu_item > div:hover{
-	background-color: #4cabd3;
+	background-color: #ff5b74;
 }
 
 .header_bottom > .menu_bar > ul.menu div.list_menu_item:hover{
@@ -269,7 +298,7 @@ div.header_top{
 }
 
 .header_bottom > .menu_bar > ul.menu > li:hover{
-	background-color:#85ccf2;
+	background-color:#ff5b74;
 	 
 }
 

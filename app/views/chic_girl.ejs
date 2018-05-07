@@ -33,21 +33,51 @@
 					</div>
 					
 					<ul>
-						<li> <a class = "login"  onclick= "login()"> login </a>  </li>  
+						<li> <a class = "login"  onclick= "login()"> เข้าสู่ระบบ </a>  </li>  
 						<li> <span class = "line"> </span> </li>
 						<li> <a href=""> สมัครสมาชิก </a>  </li>
 						<li> <span class = "line"> </span> </li>						
 						<li> <a href=""> ชำระเงิน </a>  </li> 	
 					</ul>
-					<p id ="name"> I'm here </p>
-					<a class = "logout" onclick="logout()"> ออกจากระบบ </a>
+					<!--<p id ="name"> I'm here </p>
+					<a class = "logout" onclick="logout()"> ออกจากระบบ </a>-->
 				</div>
 			</div>
 		</div>
 		
 		<div class = "header_middle ">
 			<div class = "new_wrapper clearfix">
-				<div class = "left ">
+				<div class = "top">
+						<img class = "logo" src = "images/chicgirl2.png" />
+				</div>
+				<div class = "center">
+						<img class = "truck" src = "images/icon/delivery_truck.png"/>
+						<div class = "search_item clearfix "> 
+								<form class = "search_form" action = "" target ="" method = "">
+									<input type = "text" name = "search" placeholder = "Search...">
+									<a class = "search_button" href = "javascript:void(0)"> Search </a>
+								</form>
+								<!--<a id = "mic" class = "noselect fa fa-microphone" onclick = "startConv()"> </a> -->
+							</div>
+							<div class = "catagory">
+								<ul>
+									<li> <a href =""> มอยส์จูไรเซอร์ </a></li>
+									<li> <a href ="">รอบดวงตา </a></li>
+									<li> <a href ="">คอลลาเจน</a></li>
+									<li style="border:none"> <a href =""> Sulwhasoo </a></li>
+								</ul>
+							</div>
+				</div>
+
+				<div class = "right clearfix">
+						<!--	<b style = "display:block; line-height:0px; color: #1e1e1e"> </b> -->
+					
+						<div class = "cart">
+							<a>0</a>
+						</div>
+					</div>
+				
+				<!--<div class = "left">
 					 <img class = "logo" src = "" />
 				</div>
 				
@@ -61,9 +91,11 @@
 					</div>
 					<div class = "catagory">
 						<ul>
-							<li> <a href =""> I'm yours </a></li>
-							<li> <a href ="">too good at good bye </a></li>
-							<li style="border:none"> <a href ="">sad song </a></li>
+							<li> <a href =""> ชุ่มชื้น </a></li>
+							<li> <a href ="">รักษาผิว </a></li>
+							<li> <a href ="">อ่อนเยาว์</a></li>
+							<li> <a href ="">ผิวไวต่อแสง</a></li>
+							<li style="border:none"> <a href =""> ดูแลเส้นผม </a></li>
 						</ul>
 					</div>
 				</div>
@@ -77,7 +109,7 @@
 					<div class = "cart">
 						<b>ซื้อเลย </b>
 					</div>
-				</div>
+				</div>-->
 				
 			</div>
 		</div>
@@ -125,7 +157,7 @@
 	<div class = "content">
 			<div class = "slideShow"> 
 				<ul>
-					<li> <img class="mySlides" src="images/slideShow/lip-stick.jpg" > </li>
+					<li> <img class="mySlides" src="images/slideShow/lovluv-banner.jpg" > </li>
 					<li <!--style = "right: -1400px; opacity:100"--><img class="mySlides" src="images/slideShow/rh.png" > </li>
 					<li  <!--style = "right:-1400px; opacity:100"--><img class="mySlides" src="images/slideShow/water_proof.jpg"> </li>
 				</ul>
@@ -144,18 +176,12 @@
 			
 			<div class = "news clearfix new_wrapper_content">
 				<div class = "new_goods">
-					<p style = "text-align:center;">สินค้าไหม่ล่าสุด</p>
-					<div> NEW ARRIVAL </div>
-					<p> 1-20 มิ.ย. 61 </p>
+					<img src = "images/promotion/promotion1.png"/>
+					<div class = "new">ซื้อเลย > </div>
 				</div> 
 				<div class = "then_free">
-					<div class = "item_free">
-					Picture
-					</div>
-					<p> ช๊อบครบ <span style="font-size:30px; margin:0px;padding:0px;">500</span> ขึ้นไป</p>
-					<p style = "font-size:30px;"> รับฟรี !<span style="font-size:18px"> lanuige </span></p>
-					<p>วันนี้-20 มิ.ย. 61 </p>
-					
+					<img src = "images/promotion/promotion2.png"/>
+					<div class = "new">NEW ARIVAL</div>
 				</div>
 			</div>
 			
@@ -163,14 +189,13 @@
 			<p> BEST SELLER</p>
 			<div class = "content clearfix">
 				<div> 
-					<img src = "images/bestSeller/goods.png" style = "width:100%; height:100%;">
+					<img src = "images/fake/p9.png" style = "width:100%; height:100%;">
 				</div>
 				<div class = "best_seller_detail">
 					<p> รายละเอียด </p>
 					<p> ราคา </p>
 					<div class = "amount">กราฟ</div>
 				</div>
-				
 			</div>
 		</div>
 		
@@ -194,7 +219,7 @@
 			<ul> 
 				<li class = "crop" onmouseover="balloonIn(0)" onmouseleave="balloonOut(0)"> <a href = "" style = "background-image:url(images/icon/user.png)"> </a>  <div class = "balloon"> <p> user </p> <span class = "arrow"> </span>  </div>  </li>
 				<li class = "crop" onmouseover="balloonIn(1)" onmouseleave="balloonOut(1)"> <a href = "" style = "background-image:url(images/icon/search.png)"> </a>  <div class = "balloon"> <p> search </p> <span class = "arrow"> </span>  </div>  </li>
-				<li class = "crop" onmouseover="balloonIn(2)" onmouseleave="balloonOut(2)"> <a href = "" style = "background-image:url(images/icon/cart.png)"> </a> <div class = "balloon"> <p> cart </p> <span class = "arrow"> </span>  </div>  </li>
+				<li class = "crop" onmouseover="balloonIn(2)" onmouseleave="balloonOut(2)"> <a href = "" style = "background-image:url(images/icon/cart3.png)"> </a> <div class = "balloon"> <p> cart </p> <span class = "arrow"> </span>  </div>  </li>
 				<li class = "crop" onmouseover="balloonIn(3)" onmouseleave="balloonOut(3)"> <a href = "" style = "background-image:url(images/icon/calendar.png)"> </a> <div class = "balloon"> <p> schedule </p> <span class = "arrow"> </span>  </div>  </li>
 				<li class = "crop" onmouseover="balloonIn(4)" onmouseleave="balloonOut(4)"> <a href = "" style = "background-image:url(images/icon/hearts.png)"> </a> <div class = "balloon"> <p> favarite </p> <span class = "arrow"> </span>  </div>  </li>
 				<li class = "crop" onmouseover="balloonIn(5)" onmouseleave="balloonOut(5)"> <a href = "" style = "background-image:url(images/icon/chat.png)"> </a> <div class = "balloon"> <p> chat </p> <span class = "arrow"> </span>  </div>  </li>
@@ -205,8 +230,15 @@
 
    </div>
 
+   <div class = "chatbot">
+	   <div class = "msg_bot"> <p class = "msg">สวัสดีค่ะ <br>	ฉันเป็นผู้ช่วยของที่นี่ <br> ช๊อบให้สนุกนะคะ</p></div>
+	   <div class = "model_bot">
+			<img src  ="images/bot.png"/>
+	   </div>
+   </div>
+
    <a id = "back_2_top" class = "noselect" > ^ </a>
-   <p id = "test" style = "font-size:20px; position:fixed; left:0; top:20px;color:red">ss</p>
+  
 </body>
 
 <footer>

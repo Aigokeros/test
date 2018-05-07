@@ -1,6 +1,6 @@
 .hot_deal{
 	border:2px solid #686868;
-	
+	width:1100px;
 }
 
 .hot_deal > p{
@@ -9,7 +9,7 @@
 	display: block;
 	margin: 0;
 	padding: 5px;
-
+	background-color:white;
 	box-sizing: border-box;
 	border-bottom: 2px solid #686868;
 }
@@ -21,22 +21,72 @@
 	margin: 0 auto;
 }
 
+.hot_deal > .content ul {
+	width:100%;
+	display: flex;
+}
+
+.hot_deal > .content ul #left{
+	width:50px;
+	height:50px;
+	border-radius: 50px;
+	background-color:rgb(249, 17, 67) ;
+	line-height: 50px;
+	color:white;
+	position:absolute;
+	text-align: center;
+	font-size:22px;
+	top:42%;
+	left: -25px;
+	cursor: pointer;
+}
+
+.hot_deal > .content ul #left:hover{
+
+	background-color:#ff4f7d ;
+
+}
+
+.hot_deal > .content ul #right{
+	width:50px;
+	height:50px;
+	border-radius: 50px;
+	background-color:rgb(249, 17, 67) ;
+	line-height: 50px;
+	text-align: center;	
+	color:white;
+	position:absolute;
+	font-size:22px;
+	top:42%;
+	right:-25px;
+	cursor: pointer;
+}
+
+.hot_deal > .content ul #right:hover{
+	
+	background-color:#ff4f7d ;
+
+}
+
 .hot_deal > .content li{
-	width: 223px;
-	height: 300px;
+	background-color:white;
 	border-right: 2px solid #686868;
 	float: left;
 	list-style: none;
+	flex: 1;
 	
 }
 
 .hot_deal > .content li img{
-	width: 100%;
-	height: 180px;
+	padding-top:30px;
+	width: 200px;
+	height: 200px;
+	
 }
 
 .hot_deal > .content  li  div.item{
 	position: relative;
+	
 }
 
 .hot_deal > .content  li  div.shopping {
@@ -48,8 +98,8 @@
 	width: 80px;
 	height: 45px;
 	background-color: #f44242;
-	left: 130px;
-	top: 50px;
+	right: 10px;
+	top: 65px;
 }
 
 .hot_deal > .content li:nth-child(4){
