@@ -30,4 +30,15 @@
 		<pattern>SENTENCE</pattern>
 		<template><sentence>THIS TEXT SHOULD BE FORMATTED in sentence case. tHAT means that the first letter of each sentence should be uppercase. everything else should be lowercase.</sentence></template>
 	</category>
+
+	<category>
+		<pattern>HELLO *</pattern>
+		<template>hello i'm bot </template>
+	</category>
+
+	<category>
+		<pattern>สวัสดี *</pattern>
+		<template>สวัสดีเช่นกัน เราชื่อ <bot name="name"/> </template>
+	</category>
+
 </aiml>

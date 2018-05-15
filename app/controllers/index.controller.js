@@ -15,9 +15,6 @@ exports.product = function(req, res){
 	res.render('product.ejs');
 }
 
-exports.renderHome = function(req,res){
-	res.render('test.ejs');
-}
 
 exports.chatbot = function(req, res){
 	res.render('chatbot.ejs');
@@ -28,6 +25,7 @@ exports.chatbotRes = function(req,res){
 	aiml.parseDir('./public/bot', function(err, topics){
 		var engine = new aiml.AiEngine('Default', topics, {name: 'Jonny'});
 		var responce = engine.reply({name: 'Billy'}, req.body.text, function(err, response){
+			console.log(response);
 				res.json({message:response});
 		});
 	  });

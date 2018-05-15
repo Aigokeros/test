@@ -12,12 +12,12 @@ module.exports = function(){
 
 		var app = express();
 
-		app.use(cookieSession({
+		/*app.use(cookieSession({ //cookie-session
 			name: 'session',
 			keys: ['Firts1SecretSession','Second2SecretSession']
-		}));
+		}));*/
 
-		app.use(session({
+		app.use(session({ //express session
 			secret: 'secret_key',
 			resave: false,
 			saveUninitialized:true

@@ -1,4 +1,4 @@
-var Item = require('mongoose').model('Item');
+//var Item = require('mongoose').model('Item');
 var sendCheck = false;
 var sendPost = false;
 
@@ -10,7 +10,7 @@ exports.renderSearch = function(req, res){
 }
 
 
-exports.findItem = function(req, res){
+/*exports.findItem = function(req, res){
 		Item.find({name: new RegExp(req.body.name, 'i')},function(err,data){
 			if(err){
 					
@@ -18,9 +18,9 @@ exports.findItem = function(req, res){
 				res.json(data);
 			}
 		}).sort({"date":-1})
-}
+}*/
 
-exports.findItemByName = function(req, res){
+/*exports.findItemByName = function(req, res){
 		Item.find({name: new RegExp(req.body.name, 'i')},function(err,data){
 			if(err){
 					
@@ -28,9 +28,9 @@ exports.findItemByName = function(req, res){
 				res.json(data);
 			}
 		}).sort({name:req.body.order})
-}
+}*/
 
-exports.filter = function(req, res){
+/*exports.filter = function(req, res){
 		Item.find({},function(err,data){
 			if(err){
 					
@@ -39,10 +39,10 @@ exports.filter = function(req, res){
 				res.render('filter', {title:'SEARCH', description:'THIS IS FILTER PAGE',test:data});
 			}
 	});
-}
+}*/
 
 
-exports.DetailList = function(req, res){
+/*exports.DetailList = function(req, res){
 	
 	Item.findOne({name:req.body.name}, function(err , data){
 		if(err){
@@ -52,7 +52,7 @@ exports.DetailList = function(req, res){
 		}
 	});
 	
-}
+}*/
 
 
 

@@ -15,4 +15,8 @@ module.exports = function(app){
         successRedirect: '/product'
     }));
 
+    app.route('/login')
+        .get(user.Renderlogin)
+        .post(user.login);
+
 }

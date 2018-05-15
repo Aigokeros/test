@@ -53,3 +53,18 @@ var getErrorMessage = function(err){
 	}
 	return message;
 }
+
+exports.Renderlogin = function(req, res){
+   /* if(typeof req.session.isLogin !== 'undefined'){
+        isLogin = req.session.isLogin;
+        console.log('define session');
+    }*/
+        res.render('test', {isLogin:req.session.isLogin, user:req.session.user});
+}
+
+exports.login = function(req, res){
+        req.session.user = req.body.name;
+        req.session.isLogin = true;
+        console.log(req.session.user);
+        res.redirect('/login');
+}
