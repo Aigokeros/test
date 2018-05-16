@@ -1,22 +1,3 @@
-var config = require('./config');
-var mongoose = require('mongoose');	
-
-module.exports = function(){
-	mongoose.set('debug', config.debug);
-	
-	var db = mongoose.connect(process.env.MONGOLAB_URI || config.mongoUri);
-	
-	mongoose.connection.on('connected', function() {
-    	console.log('Mongoose connected to ' + config.mongoUri);
-	});
-	mongoose.connection.on('error', function(err) {
-    	console.log('Mongoose connection error: ' + err);
-	});
-	mongoose.connection.on('disconnected', function() {
-    	console.log('Mongoose disconnected');
-	});
-
-	require('../app/models/store.model'); 
-	require('../app/models/user.model'); //ประกาศให้รู้จัก model user ยกทั้งโค๊ดมาเลย เช่น var UserModel = new Schema
-	return db;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9487142148714c4b15d1dbe24a35c40eedf77140ef9deebc3c310748cc2041b6
+size 1037
