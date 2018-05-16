@@ -1,10 +1,3 @@
-module.exports = {
-	debug: true,
-	mongoUri : 'mongodb://flok:1593572468za@localhost:27017/nfShop',
-	sessionSecret: 'dev_secret_key',
-	facebook: {
-		clientID: '277560409449230',
-		clientSecret: '682df626d836799dee1a751b922fccba',
-		callbackURL: 'http://localhost:3000/oauth/facebook/callback'
-	}
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:98158ff23228ea02d8d817ca0e2dbde15ef1a3496bb57cd581bc15d3c74c7da4
+size 645
