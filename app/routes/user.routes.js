@@ -1,22 +1,3 @@
-var user = require('../controllers/user.controller');
-var passport = require('passport');
-
-module.exports = function(app){
-    
-    
-           
-    app.get('/oauth/facebook', passport.authenticate('facebook', {
-         failureRedirect: '/',
-         scope: 'email'    // หรือ ['email', 'user_about_me']
-    }));
-
-    app.get('/oauth/facebook/callback',  passport.authenticate('facebook', {
-        failureRedirect: '/',
-        successRedirect: '/product'
-    }));
-
-    app.route('/login')
-        .get(user.Renderlogin)
-        .post(user.login);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a927f9318d9e4799ba4c920fd694cfa78d2b56e084786ba359a5b9f29ea782a
+size 618

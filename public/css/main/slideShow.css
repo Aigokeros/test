@@ -1,32 +1,3 @@
-
-
-.content div.slideShow{
-	position:relative;
-	height: 450px;
-	overflow:hidden;
-	
-}
-
-.content div.slideShow > ul{
-	list-style: none;
-
-}
-
-.content div.slideShow > ul > li{
-	width:100%;
-	position: absolute;
-	float:left;
-	transition: 2s;
-	transition-timing-function: linear;
-}
-
-.content div.slideShow > ul > li > img{
-	width :100%;
-	height: 320px;
-	
-}
-
-.content div.slideShow div.badge{
-	left:47%;
-	padding-right:40px;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0575f4014efc457d82296b25d26241ed6f55fff77acf8e1408256a5f858f2b3d
+size 1509
